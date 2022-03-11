@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply p-6 max-w-sm md:max-w-md mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4;
+}
