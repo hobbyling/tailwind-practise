@@ -5,3 +5,13 @@
 .card {
   @apply p-6 max-w-sm md:max-w-md mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4;
 }
+
+
+/* @layer base {
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+} */
