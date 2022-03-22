@@ -2,6 +2,16 @@ const plugin = require('tailwindcss/plugin')
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    filter: { // defaults to {}
+      'none': 'none',
+      'grayscale': 'grayscale(1)',
+      'invert': 'invert(1)',
+      'sepia': 'sepia(1)',
+    },
+    backdropFilter: { // defaults to {}
+      'none': 'none',
+      'blur': 'blur(20px)',
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -18,6 +28,10 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     }
+  },
+  variants: {
+    filter: ['responsive', 'hover'], // defaults to ['responsive']
+    backdropFilter: ['responsive', 'hover'], // defaults to ['responsive']
   },
   plugins: [
     require('tailwindcss'),
@@ -44,6 +58,7 @@ module.exports = {
           contentVisibility: 'auto',
         }
       })
-    })
+    }),
+    require('tailwindcss-filters'),
   ],
 }
