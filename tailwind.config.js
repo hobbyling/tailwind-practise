@@ -7,6 +7,7 @@ module.exports = {
       'grayscale': 'grayscale(1)',
       'invert': 'invert(1)',
       'sepia': 'sepia(1)',
+      'blur': 'blur(5px)'
     },
     backdropFilter: { // defaults to {}
       'none': 'none',
@@ -59,6 +60,6 @@ module.exports = {
         }
       })
     }),
-    require('tailwindcss-filters'),
+    require('tailwindcss-filters')
   ],
 }
